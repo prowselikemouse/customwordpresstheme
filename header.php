@@ -11,16 +11,13 @@
 </head>
 
 
-<body <?php body_class(); ?>>
+<body style="background-image: url(<?php echo hackerYou_get_thumbnail_url($post) ?> ); background-repeat: no-repeat; background-size: cover; background-attachment: fixed;  " <?php body_class(); ?>>
 
 <header>
-  <div class="container">
-    <h1>
-      <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-    </h1>
-
+  <div class="headerContainer">
+    <div class="tyreTracks">
+      <img class="headerImg" src="<?php bloginfo('template_directory'); ?>/images/mcHeader.svg" alt="">
+    </div>
     <?php wp_nav_menu( array(
       'container' => false,
       'theme_location' => 'primary'

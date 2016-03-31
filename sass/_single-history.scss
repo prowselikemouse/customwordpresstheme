@@ -1,0 +1,142 @@
+main div.black_skew_bottom_single {
+	background-color: $lightBlack;
+	height: 30rem;
+	transform: skewY(20deg);
+	margin-top: 6rem;
+}
+
+div.black_bottom_single {
+	background-color: $lightBlack;
+	height: 130rem;
+	margin-top: -30rem;
+}
+
+.indexContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: -150rem;
+}
+
+.postTitle {
+	color: white;
+	text-shadow: 2px 2px 20px black;
+}
+.head_subSingle {
+	margin-top: 7rem;
+}
+.contentPhotoContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 6rem;
+}
+
+.aboutBlurb {
+	font-family: $subFont;
+	color: white;
+	font-size: 1.6rem;
+	font-weight: 300;
+	width: 60%;
+	padding-right: 6rem;
+}
+
+.aboutPhoto {
+	width: 40%;
+}
+
+.allPressLinks {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.pressContainer {
+	margin: 4rem 0;
+}
+
+.PressLink {
+	position: relative;
+}
+
+.pressLinkTitle {
+	font-family: $subFont;
+	color: white;
+	font-size: 1.8rem;
+	font-weight: 300;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.pressLinkImage {
+	height: 24rem;
+	overflow: hidden;
+	
+}
+ .pressOverlay {
+	background: rgba(0,0,0,0.7);
+	opacity: 0;
+	width: 100%;
+	height: 24rem;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity .25s ease;
+ }
+ 
+.PressLink {
+	width: 28%;
+	&:hover {
+		.pressLinkTitle {
+			opacity: 1;
+
+		}
+		.pressOverlay {
+			opacity: 1;
+		}
+	}
+}
+
+.pastPartnerContainer {
+	margin: 8rem 0 0 0;
+}
+.pastPartnerLogoImage {
+	margin: 0 auto;
+}
+
+
+.partnerButtonContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+.postPartnerButton {
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 6rem;
+}
+.nav-previous,
+.nav-next {
+	font-family: $headFont;
+	font-size: 1.4rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	
+	a {
+		color: white;
+	}
+}

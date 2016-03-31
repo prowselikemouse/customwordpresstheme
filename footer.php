@@ -1,6 +1,11 @@
 <footer>
-  <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  <div class="footerContainer">
+  	<div class="logoContainer"><img class="logo" src="<?php bloginfo('template_directory'); ?>/images/mcLogo.svg" alt=""></div>
+	<?php wp_nav_menu(array (
+		'theme_location' => 'social_menu'
+	)); ?>
+  
+    <p class="copyrightFooter">&copy; <?php echo date('Y'); ?> | <a href="http://www.halifornia.co">Halifornia Design Co.</a></p>
   </div>
 </footer>
 

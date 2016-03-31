@@ -1,47 +1,46 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
+  <div class="transparent_black_triangle"></div>
+  <div class="red_skew"></div>
+  <div class="black_skew_bottom_page"></div>
+  <div class="black_bottom_page"></div>
+  <div class="pageContainer container">
+
     <div class="content">
-    <h2>Single Page</h2>
-    <img src="http://placebeyonce.com/300-300" alt="">
-      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <h1 class="entry-title"><?php the_title(); ?></h1>
-
-          <div class="entry-meta">
-            <?php hackeryou_posted_on(); ?>
-          </div><!-- .entry-meta -->
-
-          <div class="entry-content">
-            <?php the_content(); ?>
-            <?php wp_link_pages(array(
-              'before' => '<div class="page-link"> Pages: ',
-              'after' => '</div>'
-            )); ?>
-          </div><!-- .entry-content -->
-
-          <div class="entry-utility">
-            <?php hackeryou_posted_in(); ?>
-            <?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?>
-          </div><!-- .entry-utility -->
-        </div><!-- #post-## -->
-
-        <div id="nav-below" class="navigation">
-          <p class="nav-previous"><?php previous_post_link('%link', '&larr; %title'); ?></p>
-          <p class="nav-next"><?php next_post_link('%link', '%title &rarr;'); ?></p>
-        </div><!-- #nav-below -->
-
-        <?php comments_template( '', true ); ?>
-
-      <?php endwhile; // end of the loop. ?>
-
+    <?php $historyQuery = new WP_Query(array(
+    'post_type' => 'history'
+  ));?>
+    <?php if($historyQuery -> have_posts() ): ?>
+      <?php while ($historyQuery -> have_posts() ): ?>
+        <?php $historyQuery -> the_post(); ?>
+        <h1 class="historyHeadline"><?php the_title(); ?></h1>
+      <?php endwhile; ?>
+    <?php endif; ?>
     </div> <!-- /.content -->
 
-    <?php get_sidebar(); ?>
+<?php get_footer(); ?>
+
+
+    <div class="content">
+      <?php // Start the loop ?>
+        <div class="pageHead">
+          <h3 class="pageHeadline">Get in touch</h3>
+        </div> <!-- end pageHead -->
+        <form class="contactForm" action="">
+          <input class="oneLineInput" type="text" name="name" placeholder="name">
+          <input class="oneLineInput" type="text" name="email" placeholder="email">
+          <input class="messageInput" type="text" name="message" placeholder="message">
+          <input class="contactSendButton" type="submit" value="send">
+        </form>
+      <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+
+        <h2><?php the_title(); ?></h2>
+        <?php the_content(); ?>
+
+      <?php endwhile; // end the loop?>
+    </div> <!-- /,content -->
+
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
-
-<?php get_footer(); ?>

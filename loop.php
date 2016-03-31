@@ -17,6 +17,7 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			Hi.
 			<h2 class="entry-title">
         <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
           <?php the_title(); ?>

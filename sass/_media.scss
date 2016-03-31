@@ -1,0 +1,104 @@
+@media(max-width:768px) {
+	div.transparent_black_triangle {
+	float: left;
+	width: 0;
+	height: 0;
+	border-top: 300px solid transparent;
+	border-right: 768px solid rgba(0,0,0,0.7);
+	border-bottom: 300px solid transparent;
+	position: absolute;
+	top: -35rem;
+	right: 0;
+	}
+
+	div.red_skew {
+		background-color: $missionRed;
+		height: 40rem;
+		margin-top: 55rem;
+		border-top: 15rem solid $darkRed;
+		transform: skewY(20deg);
+	}
+
+	div.red_skew_back {
+		background-color: $missionRed;
+		height: 40rem;
+		margin-top: 18rem;
+		border-bottom: 15rem solid $darkRed;
+		transform: skewY(-20deg);
+	}
+
+
+}
+
+@media(max-width:580px) {
+	div.transparent_black_triangle {
+	float: left;
+	width: 0;
+	height: 0;
+	border-top: 300px solid transparent;
+	border-right: 480px solid rgba(0,0,0,0.7);
+	border-bottom: 300px solid transparent;
+	position: absolute;
+	top: -25rem;
+	right: 0;
+}
+
+	div.red_skew {
+		background-color: $missionRed;
+		height: 40rem;
+		// margin-top: 25rem;
+		border-top: 15rem solid $darkRed;
+		transform: skewY(20deg);
+	}
+
+	div.red_skew_back {
+		background-color: $missionRed;
+		height: 40rem;
+		margin-top: 18rem;
+		border-bottom: 15rem solid $darkRed;
+		transform: skewY(-20deg);
+	}
+
+	.container {
+		margin: 0 auto;
+		position: absolute;
+		top: -40rem;
+	}
+
+	div.container {
+	}
+
+	div.content {
+			z-index: 200;
+			margin-left: 2rem;
+	}
+
+	div.head_sub {
+		color: black;
+		margin-bottom: 2rem;
+		h2.headline {
+			font-family: $headFont;
+			font-weight: 400;
+			font-size: 6rem;
+			margin-bottom: 2rem;
+			text-transform: uppercase;
+		}
+		h3.subline {
+			font-family: $subFont;
+			font-size: 2rem;
+			font-weight: 500;
+			line-height: 1rem;
+		}
+	}
+
+	div.video-widget {
+		display: none;
+	}
+
+	.content {
+	}
+
+	.full {
+		width: 100%;
+	}
+}

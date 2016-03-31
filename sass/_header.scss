@@ -1,0 +1,11 @@
+img.headerImg {
+	position: relative;
+	left: -3rem;
+}
+
+@media(max-width:580px) {
+	img.headerImg {
+		top: -3rem;
+		left: -2rem;
+	}
+}

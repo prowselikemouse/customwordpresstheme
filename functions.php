@@ -22,7 +22,8 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation'
+		'primary' => 'Primary Navigation',
+		'social_menu' => 'Social Navigation'
 	) );
 
 	/*
@@ -46,7 +47,11 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+		wp_enqueue_style('googlefonts', 'https://fonts.googleapis.com/css?family=Oswald:400,300');
 }
+
+
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
 /* Add all our JavaScript files here.
@@ -126,7 +131,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 20;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -134,7 +139,7 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <a href="'. get_permalink() . '">Read more... <span class="meta-nav">&rarr;</span></a>';
 }
 
 /**
@@ -175,6 +180,16 @@ function hackeryou_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 
+	$videoWidget = array (
+		'name' => 'Video Widget Area',
+		'id' => 'custom-widget-area',
+		'before_widget' => '<div class="video-widget">',
+		'after-widget' => '</div>',
+		'before_title' => '<h4>',
+		'after_title' => '</h4>'
+	);
+
+	register_sidebar( $videoWidget );
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );
@@ -267,7 +282,7 @@ function is_blog () {
 	return ( ((is_archive()) || (is_author()) || (is_category()) || (is_home()) || (is_single()) || (is_tag())) && ( $posttype == 'post')  ) ? true : false ;
 }
 
-/* get_post_parent() - Returns the current posts parent, if current post if top level, returns itself */
+/* get_post_parent() - Returns the current posts parent, if current post is top level, returns itself */
 function get_post_parent($post) {
 	if ($post->post_parent) {
 		return $post->post_parent;
@@ -276,3 +291,21 @@ function get_post_parent($post) {
 		return $post->ID;
 	}
 }
+
+/* hackerYou_get_thumbnail_url: Return current post thumbnail url */
+
+function hackerYou_get_thumbnail_url( $post ) {
+	$imageID = get_post_thumbnail_id($post->ID);
+	$imageURL = wp_get_attachment_url($imageID);
+	return $imageURL;
+}
+
+// add_filter('show_admin_bar', '__return_false');
+// allow Wordpress to accept SVGs
+
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+
+add_filter('upload_mimes', 'cc_mime_types');

@@ -7,17 +7,31 @@
 * Author URI: http://hackeryou.com
 */
 
+$headFont: 'Oswald', sans-serif;
+$subFont: helvetica;
+$missionRed: #FF1733;
+$darkRed: #CC1228;
+$missionYellow: #F6FC06;
+$lightBlack: #262626;
+
 @import 'normalize';
-@import 'typography';
 @import 'navigation';
-@import 'sidebar';
-@import 'comments';
+@import 'header';
 @import 'footer';
+@import 'front-page';
+@import 'single-history';
+@import 'page';
+@import 'media';
 /*
 ====================================
 Default Styling
 ====================================
 */
+
+html {
+	font-size: 62.5%;
+	position: relative;
+}
 
 img {
 	max-width: 100%;
@@ -27,20 +41,99 @@ body {
 	color: #333;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.background_skews {
+	position: absolute;
+	z-index: -100;
+}
+
+.transparent_black_triangle {
+	float: left;
+	width: 0;
+	height: 0;
+	border-top: 500px solid transparent;
+	border-right: 1280px solid rgba(0,0,0,0.7);
+	border-bottom: 500px solid transparent;
+	top: -55rem;
+	right: 0;
+}
+
+.red_skew {
+	background-color: $missionRed;
+	height: 48rem;
+	margin-top:55rem;
+	border-top: 20rem solid $darkRed;
+	transform: skewY(20deg);
+}
+
+.main {
+	position: relative;
 }
 
 .content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: -50rem;
+	z-index: 200;
+	width: 80%;
+	margin: 0 auto;
 }
 
 .full {
 	width: 100%;
 }
+
+.headline {
+	font-size: 8rem;
+	text-transform: uppercase;
+	margin: 0;
+	color: white;
+	text-shadow: 10px 10px 40px black;
+}
+
+.subline h2,
+h2.subline {
+	font-family: $headFont;
+	font-size: 4rem;
+	margin: 0;
+	color: white;
+	font-weight: 400;
+	text-shadow: 10px 10px 40px black;
+}
+
+.subsubline  {
+	font-size: 3rem;
+	margin: 0;
+	color: white;
+	font-weight: 400;
+	text-shadow: 10px 10px 40px black;
+}
+
+.historyHeadline,  
+.partnerHeadline,
+.instagramHeadline,
+.sectionHeadline {
+			font-family: $headFont;
+			color: white;
+			font-weight: 300;
+			font-size: 4rem;
+			margin: 0;
+			margin-bottom: 4rem;
+}
+
+
+
 
 
 

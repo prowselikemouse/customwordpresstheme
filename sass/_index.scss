@@ -1,0 +1,16 @@
+div.black_skew_bottom_index {
+	background-color: $lightBlack;
+	height: 30rem;
+	transform: skewY(20deg);
+	margin-top: 6rem;
+}
+
+div.black_bottom_index {
+	background-color: $lightBlack;
+	height: 40rem;
+	margin-top: -30rem;
+}
+
+div.indexContainer {
+	top: -40rem;
+}
