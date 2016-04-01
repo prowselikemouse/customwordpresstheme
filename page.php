@@ -13,9 +13,8 @@ get_header();  ?>
    <div class="black_skew_bottom_page"></div>
    <div class="black_bottom_page"></div>
  </div>
-  <div class="pageContainer">
-
-    <div class="content pageContent">
+ <div class="pageContainer">
+    <div class="content">
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
@@ -31,8 +30,8 @@ get_header();  ?>
              <p class="contactInfoText"><?php the_sub_field('direct_contact_info') ?></p>
            </div> <!-- end contactInfoSpecific -->
            <?php endwhile; ?>
-         </div>
-       </div>
+         </div> <!-- end directContact -->
+       </div> <!-- end contactInfo -->
 
       <?php endwhile; // end the loop?>
     </div> <!-- /,content -->

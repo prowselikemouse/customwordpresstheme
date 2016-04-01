@@ -66,7 +66,7 @@
        <div class="instagramContainer">
            <div class="instagramTitleContainer">
               <h2 class="instagramHeadline sectionHeadline"><?php the_field('instagram_section_title') ?></h2>
-             <a href=""><p class="instagramFollowBox"><?php the_field('instagram_button') ?></p></a>
+             <a href="https://www.instagram.com/missioncrit/" target="blank"><p class="instagramFollowBox"><?php the_field('instagram_button') ?></p></a>
            </div>
          <div class="instagramImageContainer">
            <div><?php the_field('instagram_feed') ?></div>
