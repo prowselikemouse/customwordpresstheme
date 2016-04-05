@@ -78,9 +78,9 @@ ul {
 .content {
 	max-width: 1200px;
 	margin: 0 auto;
-	top: -50rem;
+	position: relative;
+	top: 2rem;
 	width: 80%;
-	margin: 0 auto;
 }
 
 .full {
@@ -90,14 +90,17 @@ ul {
 .headline {
 	font-size: 8rem;
 	text-transform: uppercase;
+	letter-spacing: 0.1rem;
 	margin: 0;
 	color: white;
+	font-family: $headFont;
 	text-shadow: 10px 10px 40px black;
 }
 
 .subline h2,
-h2.subline {
+.subline {
 	font-family: $headFont;
+	letter-spacing: 0.1rem;
 	font-size: 4rem;
 	margin: 0;
 	color: white;
@@ -107,6 +110,9 @@ h2.subline {
 
 .subsubline  {
 	font-size: 3rem;
+	font-family: $headFont;
+	font-weight: 300;
+	letter-spacing: 0.1rem;
 	margin: 0;
 	color: white;
 	font-weight: 400;

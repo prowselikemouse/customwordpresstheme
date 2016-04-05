@@ -5,7 +5,7 @@
 		'theme_location' => 'social_menu'
 	)); ?>
   
-    <p class="copyrightFooter">&copy; <?php echo date('Y'); ?> | <a href="http://www.halifornia.co">Halifornia Design Co.</a></p>
+    <p class="copyrightFooter">&copy; <?php echo date('Y'); ?> | <a href="http://www.prowselikemouse.com">ProwseLikeMouse</a></p>
   </div>
 </footer>
 

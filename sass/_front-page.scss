@@ -18,19 +18,15 @@
 	margin-top: -30rem;
 }
 
-
-.homeContainer {
-	top: -50rem;
-}
-
 .head_sub {
-	font-family: $headFont;
+	margin-top: 2rem;
 }
 
 .registerButton {
 	display: inline-block;
 	color: black;
 	background-color: $missionYellow;
+	border: 1px solid $missionYellow;
 	padding: 1rem 5rem;
 	font-family: $headFont;
 	font-weight: 300;
@@ -43,12 +39,13 @@
 	&:hover,
 	&:focus {
 		color: white;
-		background-color: $missionRed;
+		border: 1px solid white;
+		background-color: rgba(0,0,0,0.7);
 	}
 }
 
 .historyContainer {
-	margin: 8.8rem 0 6rem;
+	margin: 6.8rem 0 6rem;
 }
 
 .historyBox {
@@ -110,6 +107,7 @@
 		font-weight: bold;
 		color: $missionRed;
 		text-transform: uppercase;
+		transition: all 0.2s ease;
 		&:hover {
 		color: white;
 		}
@@ -160,6 +158,12 @@
 	text-transform: uppercase;
 	text-align: center;
 	margin: 8rem;
+	transition: all 0.2s ease;
+	&:hover {
+		color: black;
+		background-color: $missionYellow;
+		border: 1px solid $missionYellow;
+	}
 }
 
 .instagramContainer {
@@ -174,7 +178,7 @@
 a p.instagramFollowBox {
 	display: inline-block;
 	color: white;
-	padding: 0.6rem 2rem;
+	padding: 0.6rem 2.2rem 0.8rem 2rem;
 	// margin: 0.8rem 0;
 	font-family: $headFont;
 	font-weight: 300;
@@ -182,9 +186,11 @@ a p.instagramFollowBox {
 	border: 1px solid white;
 	text-transform: lowercase;
 	text-align: center;
+	transition: all 0.2s ease;
 	&:hover {
-		color: $darkRed;
-		background-color: white;
+		color: black;
+		background-color: $missionYellow;
+		border: 1px solid $missionYellow;
 	}
 }
 #sbi_load {

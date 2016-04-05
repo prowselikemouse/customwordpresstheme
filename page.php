@@ -7,7 +7,7 @@
 get_header();  ?>
 
 <div class="main">
- <div class="background_skews">
+ <div class="background_skews page_bg_skews">
     <div class="transparent_black_triangle"></div>
    <div class="red_skew"></div>
    <div class="black_skew_bottom_page"></div>
@@ -17,8 +17,9 @@ get_header();  ?>
     <div class="content">
       <?php // Start the loop ?>
       <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
-
-      <h2 class="subline contactSubline"><?php the_title(); ?></h2>
+      
+      <h2 class="headline"><?php the_title(); ?></h2>
+      <h2 class="subline contactSubline"><?php the_field('contact_form_title'); ?></h2>
        <div class="contactInfo">
           <?php the_content(); ?>
          <div class="directContact">

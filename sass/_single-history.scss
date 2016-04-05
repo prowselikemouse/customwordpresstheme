@@ -49,9 +49,10 @@ div.black_bottom_single {
 
 .pressContainer {
 	margin: 4rem 0;
+	width: 30%;
 }
 
-.PressLink {
+.pressLink {
 	position: relative;
 }
 
@@ -102,7 +103,6 @@ div.black_bottom_single {
 	margin: 0 auto;
 }
 
-
 .partnerButtonContainer {
 	display: flex;
 	flex-direction: column;
@@ -121,6 +121,7 @@ div.black_bottom_single {
 	justify-content: space-between;
 	margin-bottom: 6rem;
 }
+
 .nav-previous,
 .nav-next {
 	font-family: $headFont;

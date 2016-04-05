@@ -17,6 +17,7 @@
   <div class="headerContainer">
     <div class="tyreTracks">
       <img class="headerImg" src="<?php bloginfo('template_directory'); ?>/images/mcHeader.svg" alt="">
+      <img class="headerShadow" src="<?php bloginfo('template_directory'); ?>/images/mcHeaderShadow.png" alt="">
     </div>
     <?php wp_nav_menu( array(
       'container' => false,
